@@ -63,6 +63,21 @@ Pedir por WhatsApp
   <footer class="footer">
     <p>📲 Pedidos al 908-731-1257 | 🕒 Abierto todos los días</p>
   </footer>
+<script>
+function changeQty(id, delta){
+  const el = document.getElementById(id);
+  let v = parseInt(el.value || 1);
+  v = Math.max(1, v + delta);
+  el.value = v;
+}
 
-</body>
+function makeWhatsAppLink(product, price, id){
+  const phone = "19087311257"; 
+  const qty = document.getElementById(id).value;
+  const total = qty * price;
+
+  const msg = `Hola! Quiero ${qty} ${product}. Total: $${total}`;
+  return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+}
+</script></body>
 </html>

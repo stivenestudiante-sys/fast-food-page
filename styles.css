@@ -67,3 +67,22 @@ body {
   color: white;
   font-weight: bold;
 }
+.qty{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin:10px 0;
+}
+
+.qty button{
+  width:35px;
+  height:35px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:18px;
+}
+
+.qty input{
+  width:60px;
+  text-align:center;
+}
